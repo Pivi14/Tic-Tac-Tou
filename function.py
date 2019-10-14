@@ -13,18 +13,20 @@ def get_move():
     b = [1, 2, 3]
     row = None
     col = None
-    while board[a.index(row)][b.index(col)] != 0:
-        while not row in a:
-            try:
-                row = input("Give me the row's letter: ").upper()
-            except:
-                continue
-        while not col in b:
-            try:
-                col = int(input("Give me the column's number: "))
-            except:
-                continue
+    while not row in a:
+        try:
+            row = input("Give me the row's letter: ").upper()
+        except:
+            continue
+    while not col in b:
+        try:
+            col = int(input("Give me the column's number: "))
+        except:
+            continue
+    if board[a.index(row)][b.index(col)] != 0:
+        pass
     coord = (row, col)
+    print(board[a.index(row)][b.index(col)])
     return coord
 
 def print_board(x):
@@ -43,3 +45,5 @@ def print_board(x):
     print("B", ' {:1} | {:1} | {:1}'.format(board[1][0], board[1][1], board[1][2]))
     print('  ---+---+---')
     print("C", ' {:1} | {:1} | {:1}'.format(board[2][0], board[2][1], board[2][2]))
+
+get_move()
