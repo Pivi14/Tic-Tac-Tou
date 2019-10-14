@@ -16,4 +16,3 @@ def print_board():
     for i in range(2):
         print(*board[1], '\n', *board[0], sep = '')
 
-print_board()
