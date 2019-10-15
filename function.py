@@ -19,15 +19,18 @@ def get_move():
             try:
                 row = input("Give me the row's letter: ").upper()
             except:
+                print("Invalid letter!")
                 continue
         while not col in b:
             try:
                 col = int(input("Give me the column's number: "))
             except:
+                print("Invalid number!")
                 continue
         if board[a.index(row)][b.index(col)] != 0:
             row = None
             col = None
+            print("Someone already put there!")
             continue
         else:
             c = 1
