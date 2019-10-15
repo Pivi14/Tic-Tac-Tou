@@ -71,7 +71,7 @@ def print_board(x):
 
 
 def has_won():
-    winboard=init_board
+    winboard=init_board()
 
     for i in range(len(winboard)):
         if winboard[i][0]==1 and winboard[i][1] == 1 and winboard[i][2] == 1:
@@ -83,4 +83,15 @@ def has_won():
         if winboard[0][i] == 2 and winboard[1][i] == 2 and winboard[2][i] == 2:
             return True
     return False
+
+
+
+
+def is_full():
+    fullboard=init_board()
+    if not 0 in fullboard[0] and not 0 in fullboard[1] and not 0 in fullboard[2]:
+        return True
+    else:
+        return False
+
 get_move()
