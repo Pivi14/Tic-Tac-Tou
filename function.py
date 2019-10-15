@@ -7,47 +7,43 @@ def init_board():
             row.append(0)
     return matrix
 
-def get_move():
-    board = init_board()
-    a = ['A', 'B', 'C']
-    b = [1, 2, 3]
+def get_move(old_board):
+    board = old_board
+    row_list = ['A', 'B', 'C']
+    col_list = [1, 2, 3]
     row = None
     col = None
     c = 0
     while c == 0:
-        while not row in a:
+        while not row in row_list:
             try:
                 row = input("Give me the row's letter A, B or C: ").upper()
             except:
                 print("Please enter a valid letter!")
                 continue
-        while not col in b:
+        while not col in col_list:
             try:
                 col = int(input("Give me the column's number 1, 2, or 3: "))
             except:
                 print("Please enter a valid number!")
                 continue
-        if board[a.index(row)][b.index(col)] != 0:
+        if board[row_list.index(row)][col_list.index(col)] != 0:
             row = None
             col = None
             print("Someone already put there!")
             continue
         else:
             c = 1
-    coord = (a.index(row), b.index(col))
+    coord = (row_list.index(row), col_list.index(col))
     return coord
 
-def mark(move, main_board):
+def mark(move, main_board, player):
     board = main_board
-    a = move[0]
-    b = move[1]
-    y = 1
-    board[a][b] = y
-    if y == 1:
-        y = 2
-    else:
-        y = 1
-    return board, y
+    row = move[0]
+    col = move[1]
+    player_id = player
+    board[row][col] = player_id
+    return board
 
 def print_board(x):
     board = x
@@ -83,4 +79,3 @@ def has_won():
         if winboard[0][i] == 2 and winboard[1][i] == 2 and winboard[2][i] == 2:
             return True
     return False
-get_move()

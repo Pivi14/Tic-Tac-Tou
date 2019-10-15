@@ -8,10 +8,15 @@ def main():
     if a == 1:
         game = 0
     board = function.init_board()
+    player = 1
     while game == 0:
         function.print_board(board)
-        coord = function.get_move()
-        function.mark(coord, board)
+        coord = function.get_move(board)
+        function.mark(coord, board, player)
+        if player == 1:
+            player = 2
+        elif player == 2:
+            player = 1
 
 
 
