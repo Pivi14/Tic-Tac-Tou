@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="49f0ffe8-c3d7-4802-b437-d7ec8b0331ac" name="Default Changelist" comment="" />
+    <list default="true" id="49f0ffe8-c3d7-4802-b437-d7ec8b0331ac" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +37,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test">
-    <configuration name="function" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.main">
+    <configuration name="funtcion" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Tic-Tac-Tou" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -47,7 +50,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/function.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/funtcion.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -77,32 +80,10 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Tic-Tac-Tou" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.test" />
-        <item itemvalue="Python.function" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.funtcion" />
       </list>
     </recent_temporary>
   </component>
@@ -124,49 +105,7 @@
       <option name="project" value="LOCAL" />
       <updated>1571051458608</updated>
     </task>
-    <task id="LOCAL-00002" summary="print_board() delete">
-      <created>1571063872044</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1571063872044</updated>
-    </task>
-    <task id="LOCAL-00003" summary="file name is change">
-      <created>1571064747281</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1571064747281</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Change board function, add main modul and function">
-      <created>1571073720111</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1571073720111</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Change board function, add main modul and function">
-      <created>1571075024705</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1571075024705</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Change board function, add main modul and function">
-      <created>1571076967937</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1571076967937</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Change board function, add main modul and function">
-      <created>1571077753153</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1571077753153</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -184,9 +123,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="comit" />
-    <MESSAGE value="print_board() delete" />
-    <MESSAGE value="file name is change" />
-    <MESSAGE value="Change board function, add main modul and function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change board function, add main modul and function" />
+    <option name="LAST_COMMIT_MESSAGE" value="comit" />
   </component>
 </project>
