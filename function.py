@@ -38,6 +38,7 @@ def get_move():
     return coord
 
 def mark():
+    y = 1
     init_board[get_move[0]][get_move[1]] = y
     if y == 1:
         y = 2
