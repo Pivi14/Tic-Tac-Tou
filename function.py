@@ -37,14 +37,17 @@ def get_move():
     coord = (a.index(row), b.index(col))
     return coord
 
-def mark():
+def mark(move, main_board):
+    board = main_board
+    a = move[0]
+    b = move[1]
     y = 1
-    init_board[get_move[0]][get_move[1]] = y
+    board[a][b] = y
     if y == 1:
         y = 2
     else:
         y = 1
-    return init_board, y
+    return board, y
 
 def print_board(x):
     board = x
