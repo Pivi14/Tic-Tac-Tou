@@ -18,6 +18,8 @@ def get_move():
             except:
                 continue
         if board[a.index(row)][b.index(col)] != 0:
+            row = None
+            col = None
             continue
         else:
             c = 1
