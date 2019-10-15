@@ -37,6 +37,14 @@ def get_move():
     coord = (a.index(row), b.index(col))
     return coord
 
+def mark():
+    init_board[get_move[0]][get_move[1]] = y
+    if y == 1:
+        y = 2
+    else:
+        y = 1
+    return init_board(), y
+
 def print_board(x):
     board = x
     for i in range(len(x)):
