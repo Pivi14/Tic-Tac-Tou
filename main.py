@@ -10,15 +10,30 @@ def main():
     board = function.init_board()
     player = 1
     while game == 0:
-        print(board)
-        old_board = function.print_board(board)
-        print(old_board)
+        function.print_board(board)
         coord = function.get_move(board)
         function.mark(coord, board, player)
         if player == 1:
             player = 2
         elif player == 2:
             player = 1
+        win = function.has_won(board)
+        print(win)
+        if win[0]:
+            if win[1] == 1:
+                function.print_board(board)
+                print('Player1 is the winner')
+                game = 1
+            elif win[1] == 2:
+                function.print_board(board)
+                print('Player2 is the winner')
+                game = 1
+        draw = function.is_full(board)
+        if draw:
+            function.print_board(board)
+            print('The table is full, and the game is draw!')
+            game = 1
+
 
 
 

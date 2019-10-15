@@ -1,3 +1,5 @@
+import copy
+
 def init_board():
     matrix = []
     for i in range(3):
@@ -46,7 +48,7 @@ def mark(move, main_board, player):
     return board
 
 def print_board(x):
-    board = x
+    board = copy.deepcopy(x)
     for i in range(len(x)):
         for y in range(len(x[i])):
             if x[i][y] == 0:
@@ -67,22 +69,29 @@ def print_board(x):
 
 
 
-def has_won():
-    winboard=init_board()
-
+def has_won(board):
+    winboard = copy.deepcopy(board)
     for i in range(len(winboard)):
-        if winboard[i][0]==1 and winboard[i][1] == 1 and winboard[i][2] == 1:
-            return True
-        if winboard[i][0] == 2 and winboard[i][1] ==2 and winboard[i][2] == 2:
-            return True
-        if winboard[0][i] ==1 and winboard[1][i] == 1 and winboard[2][i] == 1:
-            return True
+        if winboard[i][0] == 1 and winboard[i][1] == 1 and winboard[i][2] == 1:
+            return True, 1
+        if winboard[i][0] == 2 and winboard[i][1] == 2 and winboard[i][2] == 2:
+            return True, 2
+        if winboard[0][i] == 1 and winboard[1][i] == 1 and winboard[2][i] == 1:
+            return True, 1
         if winboard[0][i] == 2 and winboard[1][i] == 2 and winboard[2][i] == 2:
-            return True
-    return False
+            return True, 2
+        if winboard[0][0] == 1 and winboard[1][1] == 1 and winboard[2][2] == 1:
+            return True, 1
+        if winboard[0][0] == 2 and winboard[1][1] == 2 and winboard[2][2] == 2:
+            return True, 2
+        if winboard[0][2] == 1 and winboard[1][1] == 1 and winboard[2][0] == 1:
+            return True, 1
+        if winboard[0][2] == 2 and winboard[1][1] == 2 and winboard[2][0] == 2:
+            return True, 2
+    return False, 0
 
-def is_full():
-    fullboard=init_board()
+def is_full(board):
+    fullboard = copy.deepcopy(board)
     if not 0 in fullboard[0] and not 0 in fullboard[1] and not 0 in fullboard[2]:
         return True
     else:
