@@ -44,7 +44,7 @@ def mark():
         y = 2
     else:
         y = 1
-    return init_board(), y
+    return init_board, y
 
 def print_board(x):
     board = x
@@ -63,4 +63,21 @@ def print_board(x):
     print('  ---+---+---')
     print("C", ' {:1} | {:1} | {:1}'.format(board[2][0], board[2][1], board[2][2]))
 
+
+
+
+
+def has_won():
+    winboard=init_board
+
+    for i in range(len(winboard)):
+        if winboard[i][0]==1 and winboard[i][1] == 1 and winboard[i][2] == 1:
+            return True
+        if winboard[i][0] == 2 and winboard[i][1] ==2 and winboard[i][2] == 2:
+            return True
+        if winboard[0][i] ==1 and winboard[1][i] == 1 and winboard[2][i] == 1:
+            return True
+        if winboard[0][i] == 2 and winboard[1][i] == 2 and winboard[2][i] == 2:
+            return True
+    return False
 get_move()
