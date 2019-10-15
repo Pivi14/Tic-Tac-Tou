@@ -37,8 +37,8 @@ def get_move():
     coord = (a.index(row), b.index(col))
     return coord
 
-def mark(move):
-    board = init_board()
+def mark(move, main_board):
+    board = main_board
     a = move[0]
     b = move[1]
     y = 1

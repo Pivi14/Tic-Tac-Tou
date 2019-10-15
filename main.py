@@ -10,9 +10,9 @@ def main():
     board = function.init_board()
     while game == 0:
         function.print_board(board)
-        function.get_move()
         coord = function.get_move()
-        board = function.mark(coord)
+        function.mark(coord, board)
+
 
 
 
