@@ -17,15 +17,15 @@ def get_move():
     while c == 0:
         while not row in a:
             try:
-                row = input("Give me the row's letter: ").upper()
+                row = input("Give me the row's letter A, B or C: ").upper()
             except:
-                print("Invalid letter!")
+                print("Please enter a valid letter!")
                 continue
         while not col in b:
             try:
-                col = int(input("Give me the column's number: "))
+                col = int(input("Give me the column's number 1, 2, or 3: "))
             except:
-                print("Invalid number!")
+                print("Please enter a valid number!")
                 continue
         if board[a.index(row)][b.index(col)] != 0:
             row = None
