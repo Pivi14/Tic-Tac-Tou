@@ -10,7 +10,9 @@ def main():
     board = function.init_board()
     player = 1
     while game == 0:
-        function.print_board(board)
+        print(board)
+        old_board = function.print_board(board)
+        print(old_board)
         coord = function.get_move(board)
         function.mark(coord, board, player)
         if player == 1:

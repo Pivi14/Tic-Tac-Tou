@@ -61,6 +61,7 @@ def print_board(x):
     print("B", ' {:1} | {:1} | {:1}'.format(board[1][0], board[1][1], board[1][2]))
     print('  ---+---+---')
     print("C", ' {:1} | {:1} | {:1}'.format(board[2][0], board[2][1], board[2][2]))
+    return x
 
 
 
