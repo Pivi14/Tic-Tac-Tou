@@ -1,6 +1,7 @@
 import function
 from art import *
 from termcolor import colored, cprint
+import os
 
 
 def main_menu():
@@ -34,6 +35,7 @@ def PvP():
         game = 1
         board = function.init_board()
         while game == 1:
+            os.system('clear')
             function.print_board(board)
             if player == 1:
                 print('The next is ' + Nam1)
@@ -48,6 +50,7 @@ def PvP():
             win = function.has_won(board)
             if win[0]:
                 if win[1] == 1:
+                    os.system('clear')
                     function.print_board(board)
                     print(Nam1 + ' is the winner')
                     replay = input('Are you replay? y or n: ')
@@ -59,6 +62,7 @@ def PvP():
                         play = 0
                     game = 0
                 elif win[1] == 2:
+                    os.system('clear')
                     function.print_board(board)
                     print(Nam2 + ' is the winner')
                     replay = input('Are you replay? y or n: ')
@@ -72,6 +76,7 @@ def PvP():
             draw = function.is_full(board)
             if game == 1:
                 if draw:
+                    os.system('clear')
                     function.print_board(board)
                     print('The table is full, and the game is draw!')
                     replay = input('Are you replay? y or n: ')
@@ -94,8 +99,10 @@ def AvA():
     pass
 
 if __name__ == '__main__':
+    os.system('clear')
     prog = 1
     while prog == 1:
+        os.system('clear')
         game = main_menu()
         if game == 1:
             PvP()
@@ -105,5 +112,6 @@ if __name__ == '__main__':
             AvA()
         elif game == 4:
             prog = 0
+    os.system('clear')
     byetext=text2art("Good bye\n see you soon!", font='broadway', chr_ignore=True)
     cprint(byetext, 'yellow', attrs=['bold'])
