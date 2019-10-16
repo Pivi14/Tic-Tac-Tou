@@ -48,7 +48,7 @@ def mark(move, main_board, player):
     return board
 
 def print_board(x):
-    board = copy.deepcopy(x) # importáltam egy copy modult, hogy ne írja felül a boardot
+    board = copy.deepcopy(x)
     for i in range(len(x)):
         for y in range(len(x[i])):
             if x[i][y] == 0:
@@ -70,7 +70,7 @@ def print_board(x):
 
 
 def has_won(board):
-    winboard = board# egy argumentum segítségével húztam be az aktuális boardot amit vizsgálnia kell
+    winboard = board
     for i in range(len(winboard)):
         if winboard[i][0] == 1 and winboard[i][1] == 1 and winboard[i][2] == 1:
             return True, 1
@@ -80,7 +80,7 @@ def has_won(board):
             return True, 1
         if winboard[0][i] == 2 and winboard[1][i] == 2 and winboard[2][i] == 2:
             return True, 2
-    if winboard[0][0] == 1 and winboard[1][1] == 1 and winboard[2][2] == 1: # hozzá adtam, hogy az átlókat is vizsgálja
+    if winboard[0][0] == 1 and winboard[1][1] == 1 and winboard[2][2] == 1:
         return True, 1
     if winboard[0][0] == 2 and winboard[1][1] == 2 and winboard[2][2] == 2:
         return True, 2
@@ -91,7 +91,7 @@ def has_won(board):
     return False, 0
 
 def is_full(board):
-    fullboard = board# itt is argumentumként kértem be a boardot
+    fullboard = board
     if not 0 in fullboard[0] and not 0 in fullboard[1] and not 0 in fullboard[2]:
         return True
     else:
