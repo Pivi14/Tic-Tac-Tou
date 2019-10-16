@@ -35,7 +35,7 @@ def PvP():
                 player = 2
             elif player == 2:
                 player = 1
-            win = function.has_won(board)# innentől lefele van az a rész, ahol implementáltam a függvényeidet
+            win = function.has_won(board)
             if win[0]:
                 if win[1] == 1:
                     function.print_board(board)
