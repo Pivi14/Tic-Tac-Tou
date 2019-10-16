@@ -43,8 +43,7 @@ def mark(move, main_board, player):
     board = main_board
     row = move[0]
     col = move[1]
-    player_id = player
-    board[row][col] = player_id
+    board[row][col] = player
     return board
 
 def print_board(x):

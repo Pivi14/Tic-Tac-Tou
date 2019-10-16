@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import sys
 from art import *
 from termcolor import colored, cprint
