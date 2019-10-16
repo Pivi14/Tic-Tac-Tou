@@ -1,6 +1,16 @@
 import function
+from art import *
+from termcolor import colored, cprint
+
 
 def main_menu():
+    text=text2art('Tic', font='broadway',chr_ignore=True)
+    text2=text2art('Tac', font='broadway',chr_ignore=True)
+    text3=text2art('Tou', font='broadway',chr_ignore=True)
+    cprint(text, "red", attrs=["bold"], )
+    cprint(text2, "white", attrs=["bold"])
+    cprint(text3, "green", attrs=["bold"])
+    cprint("by In 2 Calories\n", "cyan", attrs=["bold"])
     gameplay = 0
     print('MENU')
     print(' (1) Player vs Player\n', '(2) Player vs AI\n', '(3) Ai vs Ai\n', '(4) Exit')
@@ -19,21 +29,21 @@ def PvP():
     Nam1 = input("Player1's name? ")
     Nam2 = input("Player2's name? ")
     play = 1
+    player = 1
     while play == 1:
         game = 1
         board = function.init_board()
-        player = 1
         while game == 1:
             function.print_board(board)
             if player == 1:
                 print('The next is ' + Nam1)
             else:
-                print('The nest is ' + Nam2)
+                print('The next is ' + Nam2)
             coord = function.get_move(board)
             function.mark(coord, board, player)
             if player == 1:
                 player = 2
-            elif player == 2:
+            else:
                 player = 1
             win = function.has_won(board)
             if win[0]:
@@ -42,6 +52,7 @@ def PvP():
                     print(Nam1 + ' is the winner')
                     replay = input('Are you replay? y or n: ')
                     if replay == 'y':
+                        player = 2
                         game = 0
                         continue
                     elif replay == 'n':
@@ -52,6 +63,7 @@ def PvP():
                     print(Nam2 + ' is the winner')
                     replay = input('Are you replay? y or n: ')
                     if replay == 'y':
+                        player = 1
                         game = 0
                         continue
                     elif replay == 'n':
@@ -64,11 +76,16 @@ def PvP():
                     print('The table is full, and the game is draw!')
                     replay = input('Are you replay? y or n: ')
                     if replay == 'y':
+                        if player == 1:
+                            player = 2
+                        else:
+                            player = 1
                         game = 0
                         continue
                     elif replay == 'n':
                         play = 0
                     game = 0
+
 
 def PvA():
     pass
@@ -88,4 +105,5 @@ if __name__ == '__main__':
             AvA()
         elif game == 4:
             prog = 0
-    print('Good bye!')
+    byetext=text2art("Good bye\n see you soon!", font='broadway', chr_ignore=True)
+    cprint(byetext, 'yellow', attrs=['bold'])
