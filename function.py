@@ -80,14 +80,14 @@ def has_won(board):
             return True, 1
         if winboard[0][i] == 2 and winboard[1][i] == 2 and winboard[2][i] == 2:
             return True, 2
-        if winboard[0][0] == 1 and winboard[1][1] == 1 and winboard[2][2] == 1: # hozzá adtam, hogy az átlókat is vizsgálja
-            return True, 1
-        if winboard[0][0] == 2 and winboard[1][1] == 2 and winboard[2][2] == 2:
-            return True, 2
-        if winboard[0][2] == 1 and winboard[1][1] == 1 and winboard[2][0] == 1:
-            return True, 1
-        if winboard[0][2] == 2 and winboard[1][1] == 2 and winboard[2][0] == 2:
-            return True, 2
+    if winboard[0][0] == 1 and winboard[1][1] == 1 and winboard[2][2] == 1: # hozzá adtam, hogy az átlókat is vizsgálja
+        return True, 1
+    if winboard[0][0] == 2 and winboard[1][1] == 2 and winboard[2][2] == 2:
+        return True, 2
+    if winboard[0][2] == 1 and winboard[1][1] == 1 and winboard[2][0] == 1:
+        return True, 1
+    if winboard[0][2] == 2 and winboard[1][1] == 2 and winboard[2][0] == 2:
+        return True, 2
     return False, 0
 
 def is_full(board):
