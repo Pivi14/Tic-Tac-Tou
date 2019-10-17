@@ -31,6 +31,9 @@ def PvP():
     Nam2 = input("Player2's name? ")
     play = 1
     player = 1
+    win1 = text2art(Nam1 + ' is the winner')
+    win2 = text2art(Nam2 + 'is the winner')
+    play_draw = text2art('Draw')
     while play == 1:
         game = 1
         board = function.init_board()
@@ -52,7 +55,7 @@ def PvP():
                 if win[1] == 1:
                     os.system('clear')
                     function.print_board(board)
-                    print(Nam1 + ' is the winner')
+                    cprint(win1, color='red', attrs=['bold'])
                     replay = input('Are you replay? y or n: ')
                     if replay == 'y':
                         player = 2
@@ -64,7 +67,7 @@ def PvP():
                 elif win[1] == 2:
                     os.system('clear')
                     function.print_board(board)
-                    print(Nam2 + ' is the winner')
+                    cprint(win2, color='green', attrs=['bold'])
                     replay = input('Are you replay? y or n: ')
                     if replay == 'y':
                         player = 1
@@ -78,7 +81,7 @@ def PvP():
                 if draw:
                     os.system('clear')
                     function.print_board(board)
-                    print('The table is full, and the game is draw!')
+                    print(play_draw)
                     replay = input('Are you replay? y or n: ')
                     if replay == 'y':
                         if player == 1:
