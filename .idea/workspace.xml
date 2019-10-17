@@ -40,7 +40,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.test">
     <configuration name="function" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Tic-Tac-Tou" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -127,8 +127,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
         <item itemvalue="Python.test" />
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.function" />
         <item itemvalue="Python.funtcion" />
       </list>
