@@ -84,10 +84,6 @@ def PvP():
                     print(play_draw)
                     replay = input('Are you replay? y or n: ')
                     if replay == 'y':
-                        if player == 1:
-                            player = 2
-                        else:
-                            player = 1
                         game = 0
                         continue
                     elif replay == 'n':
