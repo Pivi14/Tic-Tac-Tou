@@ -2,6 +2,7 @@ import function
 from art import *
 from termcolor import colored, cprint
 import os
+from ai import *
 
 
 def main_menu():
@@ -92,7 +93,70 @@ def PvP():
 
 
 def PvA():
-    pass
+    Nam1 = input("Player1's name? ")
+    play = 1
+    player = 1
+    win1 = text2art(Nam1 + ' is the winner')
+    win2 = text2art('Computer is the winner')
+    play_draw = text2art('Draw')
+    ai = input('Choose the difficult (E - easy or H - hard): ').upper()
+    while play == 1:
+        game = 1
+        board = function.init_board()
+        while game == 1:
+            os.system('clear')
+            function.print_board(board)
+            if player == 1:
+                print('The next is ' + Nam1)
+                coord = function.get_move(board)
+            else:
+                print('The next is the Computer')
+                coord = ai_move(board, ai)
+                print(coord)
+            function.mark(coord, board, player)
+            if player == 1:
+                player = 2
+            else:
+                player = 1
+            win = function.has_won(board)
+            if win[0]:
+                if win[1] == 1:
+                    os.system('clear')
+                    function.print_board(board)
+                    cprint(win1, color='red', attrs=['bold'])
+                    replay = input('Are you replay? y or n: ')
+                    if replay == 'y':
+                        player = 2
+                        game = 0
+                        continue
+                    elif replay == 'n':
+                        play = 0
+                    game = 0
+                elif win[1] == 2:
+                    os.system('clear')
+                    function.print_board(board)
+                    cprint(win2, color='green', attrs=['bold'])
+                    replay = input('Are you replay? y or n: ')
+                    if replay == 'y':
+                        player = 1
+                        game = 0
+                        continue
+                    elif replay == 'n':
+                        play = 0
+                    game = 0
+            draw = function.is_full(board)
+            if game == 1:
+                if draw:
+                    os.system('clear')
+                    function.print_board(board)
+                    print(play_draw)
+                    replay = input('Are you replay? y or n: ')
+                    if replay == 'y':
+                        game = 0
+                        continue
+                    elif replay == 'n':
+                        play = 0
+                    game = 0
 
 def AvA():
     pass
