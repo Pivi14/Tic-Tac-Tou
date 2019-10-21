@@ -74,7 +74,9 @@ def ai_think(new_board):
             four.append(win[index])
         elif i.count(2) == 1 and i.count(0) == 2:
             three.append(win[index])
-        elif i.count(1) == 1:
+        elif i.count(1) == 1 and i.count(0) == 2:
+            two.append(win[index])
+        elif i.count(1) == 1 and i.count(0) == 1:
             two.append(win[index])
         elif i.count(0) == 3:
             one.append(win[index])

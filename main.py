@@ -100,8 +100,8 @@ def PvA():
     win2 = text2art('Computer is the winner')
     play_draw = text2art('Draw')
     ai = input('Choose the difficult (E - easy or H - hard): ').upper()
+    player = 1
     while play == 1:
-        player = 1
         game = 1
         board = function.init_board()
         while game == 1:
@@ -165,8 +165,8 @@ def AvA():
     win1 = text2art('Easy AI is the winner')
     win2 = text2art('Hard AI is the winner')
     play_draw = text2art('Draw')
+    player = 1
     while play == 1:
-        player = 1
         game = 1
         board = function.init_board()
         while game == 1:
